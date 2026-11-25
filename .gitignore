@@ -22,9 +22,6 @@ lerna-debug.log*
 .env.*
 *.local
 
-# Temporary verification / scratch files
-scratch/
-
 # Coverage & caches
 coverage
 .eslintcache
