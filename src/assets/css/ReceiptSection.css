@@ -1,0 +1,425 @@
+/* Receipt: HOT IN 14 MIN section following Hero ORDER UP. */
+.receipt-story {
+    position: relative;
+    z-index: 20;
+    min-height: 100svh;
+    background: #f5f1e7;
+    overflow-x: clip;
+    overflow-y: visible;
+    isolation: isolate;
+}
+
+.receipt-story-stage {
+    position: relative;
+    width: 100%;
+    min-height: 100svh;
+    overflow: visible;
+    background: #f5f1e7;
+}
+
+.order-up-scene,
+.receipt-scene {
+    position: absolute;
+    inset: 0;
+    overflow: visible;
+}
+
+.order-up-scene {
+    z-index: 1;
+    color: #f7f3eb;
+    background: #100c09;
+}
+
+.order-up-backdrop {
+    position: absolute;
+    inset: 0;
+    background: url('/kitchen-builder.webp') center / cover no-repeat;
+    transform: scale(1.025);
+}
+
+.order-up-shade {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(8, 6, 5, 0.55), rgba(8, 6, 5, 0.08) 34%, rgba(8, 6, 5, 0.52)),
+        linear-gradient(90deg, rgba(8, 6, 5, 0.24), transparent 24%, transparent 76%, rgba(8, 6, 5, 0.24));
+}
+
+.order-up-kicker {
+    position: absolute;
+    top: 17%;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: rgba(247, 243, 235, 0.74);
+    text-align: center;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.28em;
+}
+
+.order-up-heading {
+    position: absolute;
+    top: 49%;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7.2vw;
+    transform: translateY(-50%);
+    color: #f7f3eb;
+    font-family: Anton, Impact, sans-serif;
+    font-size: clamp(86px, 12vw, 184px);
+    line-height: 0.9;
+    letter-spacing: -0.035em;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.order-up-heading>span {
+    display: block;
+    will-change: transform, opacity;
+}
+
+.order-up-period {
+    color: #f04b20;
+}
+
+.receipt-scene {
+    z-index: 2;
+    background: #f5f1e7;
+    color: #120d0a;
+}
+
+.receipt-layout {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    align-items: center;
+    gap: 5.5vw;
+    padding: 105px 8.5vw 5vh;
+}
+
+.receipt-visual {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.receipt-pizza-target {
+    width: min(34vw, 430px);
+    aspect-ratio: 1;
+    filter: drop-shadow(0 24px 25px rgba(15, 9, 4, 0.35));
+    will-change: transform, opacity;
+}
+
+.receipt-pizza-caption {
+    margin-top: 12px;
+    color: #9b8c79;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 0.24em;
+    text-align: center;
+}
+
+.receipt-content {
+    width: 100%;
+    max-width: 570px;
+    min-width: 0;
+}
+
+.receipt-kicker {
+    color: #928675;
+    font-size: 8px;
+    letter-spacing: 0.22em;
+}
+
+.receipt-hot-title {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0 22px;
+    color: #120d0a;
+    font-family: Anton, Impact, sans-serif;
+    font-size: clamp(64px, 7.4vw, 112px);
+    line-height: 0.88;
+    letter-spacing: -0.035em;
+}
+
+.receipt-hot-title span {
+    display: block;
+    white-space: nowrap;
+}
+
+.receipt-hot-title em {
+    color: #f04b20;
+    font-style: normal;
+}
+
+.receipt-content .order-mode {
+    display: flex;
+    width: max-content;
+    gap: 5px;
+    margin: 0 0 20px;
+    padding: 4px;
+    border: 1px solid rgba(18, 13, 10, 0.16);
+    border-radius: 30px;
+}
+
+.receipt-content .order-mode button {
+    padding: 9px 18px;
+    border: 0;
+    border-radius: 25px;
+    background: transparent;
+    color: rgba(18, 13, 10, 0.62);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+.receipt-content .order-mode button[aria-pressed='true'] {
+    background: #120d0a;
+    color: #f5f1e7;
+}
+
+.receipt-content .receipt-lines {
+    padding: 14px 0;
+    border-top: 1px dashed rgba(18, 13, 10, 0.3);
+    font-family: monospace;
+    font-size: 11px;
+}
+
+.receipt-content .receipt-lines>div {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 6px 0;
+}
+
+.receipt-content .receipt-total {
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 1px dashed rgba(18, 13, 10, 0.3);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+.receipt-content .receipt-total strong {
+    font-family: Anton, Impact, sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.receipt-content .receipt-note {
+    margin: 0 0 18px;
+    color: #928675;
+    font-size: 9px;
+    line-height: 1.8;
+}
+
+.receipt-content .receipt-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+}
+
+.receipt-content .receipt-actions a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 18px;
+    border-radius: 30px;
+    background: #f04b20;
+    color: #f5f1e7;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.receipt-content .receipt-actions button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 0;
+    background: transparent;
+    color: #796b5d;
+    font-size: 8px;
+    letter-spacing: 0.08em;
+}
+
+.receipt-moving-pizza {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    width: clamp(270px, 45vw, 570px);
+    aspect-ratio: 1;
+    pointer-events: none;
+    opacity: 0;
+    filter: drop-shadow(0 24px 25px rgba(15, 9, 4, 0.35));
+    will-change: transform, opacity;
+}
+
+.receipt-moving-pizza-inner {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-3deg);
+}
+
+.receipt-moving-pizza .pizza-disc {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 900px) {
+    .receipt-story-stage {
+        min-height: 600px;
+    }
+
+    .order-up-backdrop {
+        background-position: 50% center;
+    }
+
+    .order-up-heading {
+        top: 47%;
+        padding: 0 4vw;
+        font-size: clamp(62px, 12.5vw, 112px);
+    }
+
+    .order-up-kicker {
+        top: 19%;
+        font-size: 7px;
+    }
+
+    .receipt-layout {
+        grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+        gap: 3vw;
+        padding: 90px 4vw 3vh;
+    }
+
+    .receipt-pizza-target {
+        width: min(35vw, 300px);
+    }
+
+    .receipt-pizza-caption {
+        font-size: 6px;
+        letter-spacing: 0.12em;
+    }
+
+    .receipt-hot-title {
+        margin: 12px 0 15px;
+        font-size: clamp(46px, 8.5vw, 76px);
+    }
+
+    .receipt-content .order-mode {
+        margin-bottom: 12px;
+    }
+
+    .receipt-content .order-mode button {
+        padding: 7px 11px;
+        font-size: 7px;
+    }
+
+    .receipt-content .receipt-lines {
+        font-size: 8px;
+        padding: 9px 0;
+    }
+
+    .receipt-content .receipt-lines>div {
+        padding: 4px 0;
+        gap: 7px;
+    }
+
+    .receipt-content .receipt-total strong {
+        font-size: 27px;
+    }
+
+    .receipt-content .receipt-note {
+        margin-bottom: 10px;
+        font-size: 7px;
+    }
+
+    .receipt-content .receipt-actions {
+        gap: 8px;
+    }
+
+    .receipt-content .receipt-actions a {
+        gap: 6px;
+        padding: 10px 12px;
+        font-size: 7px;
+    }
+
+    .receipt-content .receipt-actions button {
+        font-size: 6px;
+    }
+
+    .receipt-moving-pizza {
+        width: min(46vw, 360px);
+    }
+}
+
+@media (max-width: 540px) {
+    .receipt-story {
+        min-height: 100svh;
+        height: auto;
+    }
+
+    .receipt-story-stage {
+        min-height: 100svh;
+    }
+
+    .order-up-heading {
+        top: 45%;
+        font-size: clamp(56px, 12vw, 78px);
+    }
+
+    .order-up-kicker {
+        top: 22%;
+        padding: 0 20px;
+        font-size: 6px;
+    }
+
+    .receipt-layout {
+        grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+        gap: 2vw;
+        padding: 82px 3vw 2vh;
+    }
+
+    .receipt-pizza-target {
+        width: 34vw;
+    }
+
+    .receipt-hot-title {
+        font-size: clamp(40px, 8.8vw, 52px);
+    }
+
+    .receipt-content .receipt-lines {
+        font-size: 7px;
+    }
+
+    .receipt-content .receipt-total strong {
+        font-size: 23px;
+    }
+
+    .receipt-moving-pizza {
+        width: 42vw;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .receipt-story {
+        height: 100svh;
+    }
+
+    .receipt-story-stage {
+        position: relative;
+    }
+}
